@@ -1,2 +1,5 @@
-from sqlalchemy import MetaData
-from models.user import users
+from fastapi import FastAPI
+from routes.index import user
+app = FastAPI()
+
+app.include_router(user)
